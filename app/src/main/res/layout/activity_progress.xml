@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ProgressActivity">
+
+    <TextView
+        android:id="@+id/textViewProgressTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/progress_title"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/targetWeightValueLayout"
+        android:layout_width="371dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetWeightTitleLayout">
+
+        <TextView
+            android:id="@+id/textViewOriginalValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="@string/progress_startingValue" />
+
+        <TextView
+            android:id="@+id/textViewObjectiveValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/progress_startingValue"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textViewRemainingValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="@string/progress_startingValue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/targetWeightTitleLayout"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewProgressTitle">
+
+        <TextView
+            android:id="@+id/textViewOriginalWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/progress_originalTitle"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewObjectiveWeight"
+            android:layout_width="19dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/progress_targetTitle"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewRemainingWeight"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="@string/progress_remainingTitle"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_objectiveProgress"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetWeightValueLayout" />
+
+    <LinearLayout
+        android:id="@+id/progressTitleLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider_objectiveProgress">
+
+        <TextView
+            android:id="@+id/textViewLastMonthTitle"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/progress_lastMonth"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewLastWeekTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/progress_lastWeek"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textViewTotalTitle"
+            android:layout_width="73dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/progress_total"
+            android:textAlignment="center"
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressValueLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTitleLayout">
+
+        <TextView
+            android:id="@+id/textViewLastMonthValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/progress_startingValue"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="@string/progress_startingValue" />
+
+        <ImageView
+            android:id="@+id/imageViewLastMonth"
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/progress_total"
+            app:srcCompat="@drawable/ic_arrow_upward_24px"
+            tools:srcCompat="@drawable/ic_arrow_upward_24px" />
+
+        <TextView
+            android:id="@+id/textViewLastWeekValue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/progress_startingValue"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="@string/progress_startingValue" />
+
+        <ImageView
+            android:id="@+id/imageViewLastWeek"
+            android:layout_width="0.1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:contentDescription="@string/progress_upwardDownward"
+            app:srcCompat="@drawable/ic_arrow_upward_24px"
+            tools:srcCompat="@drawable/ic_arrow_upward_24px" />
+
+        <TextView
+            android:id="@+id/textViewTotalValue"
+            android:layout_width="41dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/progress_startingValue"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="@string/progress_startingValue" />
+
+        <ImageView
+            android:id="@+id/imageViewProgressTotal"
+            android:layout_width="0.1dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/progress_upwardDownward"
+            app:srcCompat="@drawable/ic_arrow_upward_24px"
+            tools:srcCompat="@drawable/ic_arrow_upward_24px" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerViewTrackingItems"
+        android:layout_width="378dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/fabAddProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressValueLayout"
+        tools:listitem="@layout/progress_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@string/progress_add"
+        android:src="@drawable/ic_add_24px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/fab_3_rounded" />
+
+    <Button
+        android:id="@+id/buttonSignOut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/signOut"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fabAddProgress"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

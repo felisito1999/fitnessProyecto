@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Fitness app</string>
+    <string name="login_logo_contentDescription">This possesses a man lifting weights as a representation of what the app attempts to achieve</string>
+    <string name="editTextEmail_hint">Email address</string>
+    <string name="editTextPassword_hint">Password</string>
+    <string name="editTextName_hint">First name</string>
+    <string name="editTextLastName_hint">Last name</string>
+    <string name="login_buttonLogin_text">Sign in</string>
+    <string name="login_linkToRegistration">Create an account</string>
+    <string name="registration_buttonSignUp">Sign up</string>
+    <string name="registration_linkToSignIn">Sign in</string>
+    <string name="welcome_greeting">Hello, </string>
+    <string name="progress_title">Weights (pounds)</string>
+    <string name="progress_originalTitle">Original</string>
+    <string name="progress_targetTitle">Target</string>
+    <string name="progress_remainingTitle">Remaining</string>
+    <string name="welcome_actualWeightQuestion">How much do you weigh?</string>
+    <string name="welcome_weightLostTargetQuestion">How many pounds do you plan to lose?</string>
+    <string name="welcome_nextButton">Next</string>
+    <string name="progress_lastMonth">Last Month</string>
+    <string name="progress_lastWeek">Last week</string>
+    <string name="progress_total">Total</string>
+    <string name="progress_upwardDownward">Image that describes a positive or negative behaviour on the fluctuation of the weight</string>
+    <string name="progress_startingValue">0.00</string>
+    <string name="progress_add">Add progress record</string>
+    <string name="poundUnitEnding"> lb</string>
+    <string name="progressRegistration_weight">Weight</string>
+    <string name="progressRegistration_addRecord">Add record</string>
+    <string name="signOut">Sign out</string>
+</resources>
